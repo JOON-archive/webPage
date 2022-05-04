@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+      span {
+        /* in-line-block 명시 */
+        display: inline-block;
+        animation: waviy 1.5s infinite;
+        animation-delay: calc(0.1s * var(--i));
+      }
+      @keyframes waviy {
+        0%,
+        40%,
+        100% {
+          transform: translateY(0);
+        }
+        20% {
+          transform: translateY(-20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="main-container">
+        <!-- greeting-wrapper 인사글 -->
+        <div class="greeting-wrapper">
+          <h1>
+            <span style="--i: 1">H</span>
+            <span style="--i: 2">e</span>
+            <span style="--i: 3">l</span>
+            <span style="--i: 4">l</span>
+            <span style="--i: 5">o</span>
+            <span style="--i: 6">w</span>
+            <span style="--i: 7">o</span>
+            <span style="--i: 8">r</span>
+            <span style="--i: 9">l</span>
+            <span style="--i: 10">d</span>
+            <span style="--i: 11">!</span>
+            <span style="--i: 12">!</span>
+          </h1>
+        </div>
+        <!-- intro-wrapper 본인소개(증명사진 및 뭐하는지) -->
+        <div class="intro-wrapper">
+          <!-- grid 예정 -->
+          <div class="nav-wrapper">
+            <div class="dots-wrapper">
+              <!-- id 이름은 고유해야 한다.(ex. PK) -->
+              <div id="dot-1" class="dot"></div>
+              <div id="dot-2" class="dot"></div>
+              <div id="dot-3" class="dot"></div>
+            </div>
+          </div>
+          <!-- 내 정보 -->
+          <div class="info-wrapper">
+            <img src="sad.gif" alt="" />
+            <h5>Junsu Kim</h5>
+          </div>
+          <!-- 나는 뭘 하는가! -->
+          <div class="do-wrapper">
+            <div class="preview-shadow">
+              <div class="preview">
+                <div id="corner-tl"></div>
+                <div id="corner-tr"></div>
+                <h3>What I do</h3>
+                <p>
+                  프론트엔드에 관심이
+                  많습니다.
+                </p>
+                <div id="corner-br"></div>
+                <div id="corner-bl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
